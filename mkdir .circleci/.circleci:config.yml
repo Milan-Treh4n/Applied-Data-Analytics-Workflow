@@ -1,0 +1,35 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@2.3.3
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/python:3.11
+
+    steps:
+      - checkout
+
+      # Install Python dependencies
+      - python/install-packages:
+          pkg-manager: pip
+          requirements: "requirements.txt"
+
+      # Run tests
+      - run:
+          name: Run unit tests with pytest
+          command: |
+            pytest --maxfail=1 --disable-warnings -q
+
+      # Run linting
+      - run:
+          name: Lint with flake8
+          command: |
+            pip install flake8
+            flake8 src/
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
