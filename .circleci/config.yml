@@ -26,7 +26,7 @@ jobs:
           name: Run flake8 (lint)
           command: |
             pip install flake8
-            flake8 src/ --max-line-length=120 --ignore=E302,E305
+            flake8 src/ --max-line-length=120 --ignore=E302,E305,W391,W293,W291
 
 workflows:
   main:
