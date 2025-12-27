@@ -1,8 +1,8 @@
 import pandas as pd
 
-from src.clean_business_survival_rates import clean_business_survival_rates
-from src.clean_uk_business_births import clean_uk_business_births
-from src.clean_uk_business_deaths import clean_uk_business_deaths
+from clean_business_survival_rates_2019 import clean_business_survival_rates
+from clean_uk_business_births_2019 import clean_uk_business_births
+from clean_uk_business_deaths_2019 import clean_uk_business_deaths
 
 
 # ---------- Business survival rates ----------
