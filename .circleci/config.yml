@@ -8,28 +8,29 @@ jobs:
     steps:
       - checkout
 
-      # Install python dependencies
+      # Install dependencies
       - run:
           name: Install dependencies
           command: |
             python -m pip install --upgrade pip
             pip install -r requirements.txt
 
-      # Run tests
+      # Run unit tests
       - run:
           name: Run pytest
           command: |
             pytest --maxfail=1 --disable-warnings -q
 
-      # Linting (optional but recommended)
+      # Run flake8 with relaxed rules
       - run:
-    name: Run flake8
-    command: |
-      pip install flake8
-      flake8 src/ --max-line-length=120 --ignore=E302,E305
+          name: Run flake8 (lint)
+          command: |
+            pip install flake8
+            flake8 src/ --max-line-length=120 --ignore=E302,E305
 
 workflows:
   main:
     jobs:
       - build-and-test
+
 
