@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 from pathlib import Path
 
-# Project root (this file lives in /plots)
+# Project root 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 # Load dataset that already contains percentages
@@ -16,7 +16,7 @@ years = df.iloc[:, 0]
 births_pct = df.iloc[:, 1]
 deaths_pct = df.iloc[:, 2]
 
-# ---- Plot ----
+# Plot
 plt.figure(figsize=(10, 6))
 
 plt.plot(years, births_pct, marker="o", linewidth=3,
@@ -36,7 +36,7 @@ plt.xticks(years)  # show each year on x-axis
 plt.legend()
 plt.tight_layout()
 
-# ---- Save ----
+# Save
 plots = PROJECT_ROOT / "plots"
 plots.mkdir(exist_ok=True)
 out_path = plots / "uk_business_birth_death_rates_2019_2024.png"
