@@ -67,10 +67,9 @@ def clean_business_birth_death_rates(df: pd.DataFrame) -> pd.DataFrame:
     births_series = numeric[births_col]
     deaths_series = numeric[deaths_col]
 
+    # ✅ FIXED: no line breaks before '&' (avoids W503)
     mask = (
-        year_series.between(2000, 2100)
-        & births_series.notna()
-        & deaths_series.notna()
+        year_series.between(2000, 2100) & births_series.notna() & deaths_series.notna()
     )
 
     cleaned = pd.DataFrame(
@@ -104,3 +103,4 @@ if __name__ == "__main__":
 
     print(f"Saved cleaned file to: {out_path}")
     print(clean_df)
+
