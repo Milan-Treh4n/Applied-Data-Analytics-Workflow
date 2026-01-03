@@ -1,2 +1,2 @@
-# Applied-Data-Analytics-Workflow
-A clean, tested, and continuously integrated data-analytics workflow built for the DAT5501 module. Includes structured Python modules, reproducible analysis, multiple datasets, CircleCI automation, and comprehensive unit tests.
+# UK Business Demographics: Applied Data Analytics Workflow
+A comprehensive, end-to-end data science pipeline analysing the births, deaths, and survival rates of UK businesses. This project demonstrates a professional analytical workflow developed for Queen Mary University of London, DAT5501 module emphasising reproducibility, code quality, and automated insights.
