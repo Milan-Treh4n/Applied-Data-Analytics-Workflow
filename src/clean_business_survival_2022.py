@@ -1,10 +1,6 @@
 """
 Cleaning pipeline for Business Survival (2022 cohort).
-
-Source: ONS Business Demography Table 5.1d
-Produces readable survival statistics with clear titled columns.
 """
-
 from pathlib import Path
 import pandas as pd
 
