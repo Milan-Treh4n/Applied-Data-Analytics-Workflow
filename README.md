@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/Milan-Treh4n/uk-business-births-deaths-survival-analysis/tree/main.svg?style=sheild)](https://circleci.com/gh/Milan-Treh4n/uk-business-births-deaths-survival-analysis/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Milan-Treh4n/uk-business-births-deaths-survival-analysis/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/Milan-Treh4n/uk-business-births-deaths-survival-analysis/tree/main)
 
 
 # UK Business Demographics: Applied Data Analytics Workflow
